@@ -1,17 +1,20 @@
-pipeline{
+pipeline {
     agent any
+
     stages {
-        stage('Initialize'){
-            steps{
-                cmd '''
-                echo "2PATH = ${PATH}"
-                echo "M2_HOME  = ${M2_HOME}"
-                   '''
+        stage('Build') {
+            steps {
+                echo 'Building..'
             }
         }
-        stage('Build'){
+        stage('Test') {
             steps {
-                echo "Hello World!"
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
