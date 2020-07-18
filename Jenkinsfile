@@ -4,9 +4,9 @@ pipeline{
         stage('Initialize'){
             steps{
                 sh '''
-                echo "PATH = ${PATH}"
+                echo "1PATH = ${PATH}"
                 echo "M2_HOME  = ${M2_HOME}"
-				   '''
+                   '''
             }
         }
         stage('Build'){
